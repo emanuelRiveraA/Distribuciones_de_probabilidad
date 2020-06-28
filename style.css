@@ -1,0 +1,65 @@
+:root{
+    --first-color:#007BDF;
+    --first-color-alt:#006DC6;
+    --second-color:#00CBFF;
+    --second-color-alt:#00BFF0;
+    --third-color:#FF3C32;
+    --third-color-rgba: rgba(255,60,50,5);
+    --third-color-alt:#FF2419;
+    --accent-color:#FBA905;
+    --accent-color-alt:#F1A000;
+    --dark-color:#282D31;
+    --dark-color-alt:#141618;
+    --border-color:#DFE0E0;
+    --text-color:#53575A;
+    --body-bg:#FAFDFF;
+    --font-main:sans-serif;
+    --font-size:16px;
+    --line-height:1.6;
+    --header-heigth:9rem;
+    --max-width:1200px;    
+}
+
+html{
+    box-sizing: border-box;/* para evitar que se agrande los elemento con el padding */
+    font-family: var(--font-main);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    background-color: var(--body-bg);
+    color: var(--text-color);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;/* heredado */
+    padding: 0;
+    margin: 0;
+}
+
+.Header{
+    background-color: var(--first-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    height: var(--header-heigth);
+    text-align: center;
+    color: var(--border-color);
+}
+
+.Main{
+    padding: calc(var(--header-heigth) + 1rem) 1rem 0;/* para eliminar el colapso de margenes */
+    margin: 0 auto;/* pa centrar el contenido */
+    max-width: var(--max-width);
+}
+
+.Main h2{
+    color: var(--third-color);
+}
+
+.Main section{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--dark-color);
+    color: var(--accent-color);
+}
