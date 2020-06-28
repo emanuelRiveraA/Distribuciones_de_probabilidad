@@ -63,3 +63,39 @@ html{
     background-color: var(--dark-color);
     color: var(--accent-color);
 }
+
+.formulario{ 
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: dashed var(--third-color);
+    /*para centrar el contenido*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*EJEMPLO DE PSEUDOCLASE*/
+.formulario input:not([type="submit"]){/*se aplica */
+    margin-bottom: .5rem;
+    width: 60%;
+    padding: .5rem;
+    border: thin solid var(--second-color);
+    background-color: var(--body-bg);
+    color: var(--first-color);
+}
+
+.formulario input[type="submit"]{
+    width: 40%;
+    padding: .5rem .25rem;
+    border: 0;
+    border-radius: .25rem;
+    background-color: var(--first-color);
+    color: var(--body-bg);
+    transition: all .3s ease-in;
+}
+
+form input[type="submit"]:hover{
+    background-color: var(--accent-color);
+}
