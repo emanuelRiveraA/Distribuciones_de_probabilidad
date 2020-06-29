@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Esta web es para calcular operaciones de probabilidad">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Title Page</title>
         <link rel="stylesheet" href="style.css">
@@ -26,12 +27,12 @@
                 <p>En esta distribución todos y cada uno de los resultados del experimento tiene la misma probabilidad de ocurrir.</p>
                 <form class="formulario" action="">
                     <label for="">Ingrese primer número:</label></br>
-                    <input type="number" class="text" placeholder="Ingrese un número"></br>
-                    <input type="submit" value="calcular">
+                    <input id="txt_numero" type="number" class="text" placeholder="Ingrese un número" name="txt_numero"></br>
+                    <input id="btn_calcular" type="submit" value="calcular" name="btn_calcular" >
                 </form>
             </section>
             
         </main>
-        
+        <script type="text/javascript" src="operaciones.js"></script>
     </body>
 </html>
