@@ -3,12 +3,12 @@
 
 window.onload = function(){
 
-
-    var txt_numero = document.querySelector('#txt_numero').Value;
-    const btn_calcular = document.querySelector('#btn_calcular')
+    var txt_numero = null;
+    const btn_calcular = document.querySelector('#btn_calcular');
 
     btn_calcular.addEventListener('click', function(event) {
-        alert(txt_numero);
+        txt_numero = document.getElementById('txt_numero').value;
+        alert("Dds"+txt_numero);
     });
 
 
