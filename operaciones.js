@@ -19,8 +19,6 @@ window.onload = function(){
         alert("Dds"+txt_numero);
     });
 
-
-
     /* Distribucion binomial */
 
     btn_calcular_binomial.addEventListener('click', function(event){
@@ -31,13 +29,20 @@ window.onload = function(){
     });
 
     function calcularCombinacion(){
-        
+        let numero_p = txt_p.value;
+        let numero_q = txt_q.value;
         let numero_n = txt_n.value;
         let numero_x = txt_x.value;
-        let distribucion_binomial = 0;
+        let coeficiente_binomial = 0;
+        let resta = numero_n - numero_x;
+        let resultado = 0;
 
-        distribucion_binomial = calcularFactorial(numero_n) / (calcularFactorial(numero_x) * calcularFactorial(numero_n - numero_x));
-        console.log('la distribucion binomial es: ' + distribucion_binomial);
+        coeficiente_binomial = calcularFactorial(numero_n) / (calcularFactorial(numero_x) * calcularFactorial(resta));
+        console.log('la distribucion binomial es: ' + coeficiente_binomial);
+        resultado = coeficiente_binomial * Math.pow(numero_p/100,numero_x) * Math.pow(numero_q/100, resta);
+        console.log(resultado);
+        alert("La probabilidad de que de "+ numero_n + " seleccionados " + numero_x + " resulte en fracaso es de: " + resultado + " es decir: " + Number.parseFloat(resultado*100).toFixed(2)+"%");
+        return resultado;
     }
 
     function calcularFactorial (numero){
@@ -53,9 +58,5 @@ window.onload = function(){
 
         return resultado;        
     }
-
-    
-
-
 
 }
