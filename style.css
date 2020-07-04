@@ -121,3 +121,17 @@ form input[type="submit"]:hover{
 .item-btn{
     width: 60%;
 }
+
+/*Para las formulas*/
+.fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid var(--third-color)}
+.fraction span.bar {display: none;}

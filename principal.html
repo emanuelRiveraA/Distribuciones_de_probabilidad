@@ -72,7 +72,42 @@
                     </div>
                 </form>
             </section>
-            
+            <section>
+                <h3>Distribución Hipergeométrica</h3>
+                <p>Representa el número de éxitos en una muestra aleatoria de tamaño n seleccionada de N resultados posibles, de los cuales k son considerados como éxitos y N-k son considerados fracasos.</p>
+                <p>La formula es:</p>
+                <div class="eq-c">
+                    <i>h</i>(x;n;k;N) =
+                    <div class="fraction">
+                    <span class="fup"><i>k<sup>C</sup>x</i> (N-k)<sup>C</sup>(n-x)</span>
+                    <span class="bar">/</span>
+                    <span class="fdn">N<sup>C</sup>n</span>
+                    </div>
+                </div>
+                <div class="formulario">
+                    <div class="contenedor">
+                        <div class="item">
+                            <label for="">Ingrese valor para "N" :</label></br>
+                            <input id="txt_N_mayuscula" type="number" class="text" placeholder="Grupo Total" name="txt_N_mayuscula"></br>
+                        </div>
+                        <div class="item">
+                            <label for="">Ingrese valor para "n" :</label></br>
+                            <input id="txt_n2" type="number" class="text" placeholder="Número de elementos" name="txt_n2"></br>
+                        </div>                        
+                    </div>
+                    <div class="contenedor">
+                        <div class="item">
+                            <label for="">Ingrese valor para "k" :</label></br>
+                            <input id="txt_k" type="number" class="text" placeholder="Elementos de éxito" name="txt_k"></br>
+                        </div>
+                        <div class="item">
+                            <label for="">Ingrese valor para "x" :</label></br>
+                            <input id="txt_x2" type="number" class="text" placeholder="Éxitos" name="txt_x2"></br>
+                        </div>                        
+                    </div>
+                </div>
+    
+            </section>
         </main>
         <script type="text/javascript" src="operaciones.js"></script>
     </body>
