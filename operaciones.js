@@ -107,22 +107,9 @@ window.onload = function(){
         let numero_lamda = txt_lamda.value;
         let resultado = 0;
 
-        resultado = (Poisson(numero_lamda) * Math.pow(numero_lamda, numero_x_poisson)) / calcularFactorial(numero_x_poisson);
+        resultado = (Math.pow(2.71828, -numero_lamda) * Math.pow(numero_lamda, numero_x_poisson)) / calcularFactorial(numero_x_poisson);
         alert("es el valor es: "+resultado);
 
     });
 
-    function Poisson(lamda){
-        let ri = 0.0;
-        let x = 0;
-        let limite = Math.exp(-lamda);
-        let valor=1;
-        while(valor>=limite){
-            ri = Math.random();
-            valor=valor*ri;
-            x++;
-        }
-
-        return x;
-    }
 }
