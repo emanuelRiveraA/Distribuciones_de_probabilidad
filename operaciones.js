@@ -49,13 +49,10 @@ window.onload = function(){
         
         let numero_minimo = txt_numero_minimo.value;
         let numero_maximo = txt_numero_maximo.value;
-        let resultado = 1;
+        let resultado_fraccion = "1/"+ ((numero_maximo - numero_minimo)+1);
+        let resultado_porcentaje = 1 /((numero_maximo - numero_minimo)+1);
 
-        for (let i = numero_minimo; i <= numero_maximo; i++) {
-            console.log(i);           
-        }
-
-        console.log(resultado);
+        alert("La ocurrencia de cada uno de los resultados tiene la probabilidad de: "+resultado_fraccion+" es decir: "+ Number.parseFloat(resultado_porcentaje*100).toFixed(2) + "%");
     });
 
     /* Distribucion binomial */
