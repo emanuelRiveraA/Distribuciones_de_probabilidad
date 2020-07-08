@@ -84,8 +84,8 @@ window.onload = function(){
 
         comb_kx = calcularFactorial(numero_k) / (calcularFactorial(numero_x2) * calcularFactorial(numero_k - numero_x2));
         console.log(comb_kx);
-        comb_NK = calcularFactorial(numero_N_mayuscula - numero_k) / ( calcularFactorial(numero_n2 - numero_x2) * ((numero_N_mayuscula - numero_k) - (numero_n2 - numero_x2)));
-        console.log(comb_NK);
+        comb_NK = calcularFactorial(numero_N_mayuscula - numero_k) / ( calcularFactorial(numero_n2 - numero_x2) * calcularFactorial((numero_N_mayuscula - numero_k) - (numero_n2 - numero_x2)));
+        console.log(Number.parseFloat(comb_NK));
         comb_Nn = calcularFactorial(numero_N_mayuscula) / (calcularFactorial(numero_n2) * calcularFactorial(numero_N_mayuscula - numero_n2));
         console.log(comb_Nn);
         resultado = (comb_kx * comb_NK) / comb_Nn;
