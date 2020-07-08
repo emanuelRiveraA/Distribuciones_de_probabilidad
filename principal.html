@@ -112,6 +112,36 @@
                     </div>
                 </form>    
             </section>
+            <section>
+                <h3>Distribución de POISSON</h3>
+                <p>Representa el número de resultados que ocurren en un intervalo de tiempo dado o en una región específica indicado por t..</p>
+                <p>La formula es:</p>
+                <div class="eq-c">
+                    <i></i>p(x;λ) =
+                    <div class="fraction">
+                    <span class="fup"><i>e<sup> -λ</sup></i> (λ)<sup> x</sup></span>
+                    <span class="bar">/</span>
+                    <span class="fdn">x!<sup></sup></span>
+                    </div>
+                </div>
+                <form action="" class="formulario">
+                    <div class="contenedor">
+                        <div class="item">
+                            <label for="">Ingrese valor para "x" :</label></br>
+                            <input id="txt_x_poisson" type="number" class="text" placeholder="Es el número de éxitos" name="txt_x_poisson"></br>
+                        </div>
+                        <div class="item">
+                            <label for="">Ingrese valor para "λ" :</label></br>
+                            <input id="txt_lamda" type="number" class="text" placeholder="Representa el promedio de éxitos esperados en una unidad de tiempo" name="txt_lamda"></br>
+                        </div>  
+                    </div>
+                    <div class="contenedor-btn">
+                        <div class="item-btn">
+                            <input id="btn_calcular_poisson" type="submit" value="calcular" name="btn_calcular_poisson" >
+                        </div>
+                    </div>
+                </form>
+            </section>
         </main>
         <script type="text/javascript" src="operaciones.js"></script>
     </body>

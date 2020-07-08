@@ -20,6 +20,11 @@ window.onload = function(){
     const txt_x2 = document.getElementById('txt_x2');
     const btn_calcular_hipergeometrica = document.getElementById('btn_calcular_hipergeometrica');
 
+    /** variables para los elementos de distribucion de POISSON */
+    const txt_x_poisson = document.getElementById('txt_x_poisson');
+    const txt_lamda = document.getElementById('txt_lamda');
+    const btn_calcular_poisson = document.getElementById('btn_calcular_poisson');
+
     /** funcion para calcular el factorial de un número */
     function calcularFactorial (numero){
         
@@ -90,9 +95,34 @@ window.onload = function(){
         console.log(comb_Nn);
         resultado = (comb_kx * comb_NK) / comb_Nn;
         console.log(resultado);
+        alert("La probabilidad de que "+ numero_n2 +" elementos seleccionados " + numero_x2 +  " es de " + resultado + " es decir " + Number.parseFloat(resultado*100).toFixed(2)+"%");
 
     });
 
+    /** Distribución de POISSON */
+    btn_calcular_poisson.addEventListener('click', function(event){
+        event.preventDefault();
 
+        let numero_x_poisson = txt_x_poisson.value;
+        let numero_lamda = txt_lamda.value;
+        let resultado = 0;
 
+        resultado = (Poisson(numero_lamda) * Math.pow(numero_lamda, numero_x_poisson)) / calcularFactorial(numero_x_poisson);
+        alert("es el valor es: "+resultado);
+
+    });
+
+    function Poisson(lamda){
+        let ri = 0.0;
+        let x = 0;
+        let limite = Math.exp(-lamda);
+        let valor=1;
+        while(valor>=limite){
+            ri = Math.random();
+            valor=valor*ri;
+            x++;
+        }
+
+        return x;
+    }
 }
