@@ -3,8 +3,10 @@
 
 window.onload = function(){
 
-    var txt_numero = null;
-    const btn_calcular = document.querySelector('#btn_calcular');
+    /** variables para los elementos de distribucion uniforme */
+    const txt_numero_minimo = document.getElementById('txt_numero_minimo');
+    const txt_numero_maximo = document.getElementById('txt_numero_maximo');
+    const btn_calcular_uniforme = document.getElementById('btn_calcular_uniforme');
 
     /** variables para los elementos de distribucion binomial */
     const txt_p = document.getElementById('txt_p');
@@ -41,10 +43,19 @@ window.onload = function(){
     }    
 /************************************************************************ */
 
-    btn_calcular.addEventListener('click', function(event) {
+    /** Distribucion uniforme */
+    btn_calcular_uniforme.addEventListener('click', function(event) {
         event.preventDefault();
-        txt_numero = document.getElementById('txt_numero').value;
-        alert("Dds"+txt_numero);
+        
+        let numero_minimo = txt_numero_minimo.value;
+        let numero_maximo = txt_numero_maximo.value;
+        let resultado = 1;
+
+        for (let i = numero_minimo; i <= numero_maximo; i++) {
+            console.log(i);           
+        }
+
+        console.log(resultado);
     });
 
     /* Distribucion binomial */
@@ -108,8 +119,7 @@ window.onload = function(){
         let resultado = 0;
 
         resultado = (Math.pow(2.71828, -numero_lamda) * Math.pow(numero_lamda, numero_x_poisson)) / calcularFactorial(numero_x_poisson);
-        alert("es el valor es: "+resultado);
-
+        alert("La probabilidad de que "+ numero_x_poisson+ " es de " +resultado + " es decir "+ Number.parseFloat(resultado*100).toFixed(2) + "%");
     });
 
 }
